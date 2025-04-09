@@ -33,7 +33,7 @@ def predict(input_img):
     
 
 css = """
-.lg secondary  svelte-1ixn6qd {display: none !important}
+.gradio-share-link-button-0 {display: none !important}
 """
 
 brain_app = gr.Interface(
