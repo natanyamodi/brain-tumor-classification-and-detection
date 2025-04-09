@@ -32,6 +32,10 @@ def predict(input_img):
         return input_img, {"No tumor detected": 1.0}
     
 
+css = """
+.lg secondary  svelte-1ixn6qd {display: none !important}
+"""
+
 brain_app = gr.Interface(
     fn=predict,
     inputs=gr.Image(type="pil", label="Upload Brain MRI Scan"),
@@ -47,7 +51,8 @@ brain_app = gr.Interface(
         "images/meningioma.jpeg",
         "images/pituitary.jpeg"
     ],
-    flagging_mode="never"
+    flagging_mode="never",
+    css=css
 )
 
 if __name__ == '__main__':
