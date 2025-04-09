@@ -33,7 +33,9 @@ def predict(input_img):
     
 
 css = """
-.gradio-share-link-button-0 {display: none !important}
+#gradio-share-link-button-0 { 
+    display: none !important; 
+}
 """
 
 brain_app = gr.Interface(
@@ -56,4 +58,4 @@ brain_app = gr.Interface(
 )
 
 if __name__ == '__main__':
-    brain_app.launch(share=False)
+    brain_app.launch()
