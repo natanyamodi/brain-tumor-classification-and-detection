@@ -50,4 +50,4 @@ brain_app = gr.Interface(
     flagging_mode="never"
 )
 
-brain_app.launch(share=True)
+brain_app.launch(share=False)
