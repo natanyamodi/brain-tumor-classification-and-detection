@@ -50,5 +50,4 @@ brain_app = gr.Interface(
     flagging_mode="never"
 )
 
-if __name__ == "__main__":
-    brain_app.launch()
+brain_app.launch()
