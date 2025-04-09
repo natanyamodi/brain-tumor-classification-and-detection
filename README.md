@@ -11,7 +11,8 @@ short_description: This app detects and classifies brain tumors in MRI scans
 ---
 
 # 🧠 Brain Tumor Detection and Classification with YOLOv8
-A deep learning system for detecting and classifying brain tumors in MRI scans using YOLOv8, deployed as a Gradio web application.
+### A deep learning system for detecting and classifying brain tumors in MRI scans using YOLOv8, deployed as a Gradio web application.
+
 ![App Screenshot](https://github.com/user-attachments/assets/e8da60fd-5d15-4354-95cc-37789d4281db)
 
 ## 🌟 Features
