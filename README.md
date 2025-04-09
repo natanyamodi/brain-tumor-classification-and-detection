@@ -57,3 +57,7 @@ pip install -r requirements.txt
 ```
 python app.py
 ```
+
+## 🎖️ Try it out
+Use the interactive interface below to upload MRI scans and get instant predictions with confidence scores.
+[cerebroscan](https://huggingface.co/spaces/natanyamodi/cerebroscan)
