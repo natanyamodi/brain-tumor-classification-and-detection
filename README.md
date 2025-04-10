@@ -24,8 +24,6 @@ short_description: This app detects and classifies brain tumors in MRI scans
 - **Interactive UI**: Upload images, view detections, and see confidence levels.
 - **Lightweight & Fast**: Optimized using YOLOv8 for speed and accuracy.
 
----
-
 ## 🧪 Model Training
 
 The model was trained using **Ultralytics YOLOv8** for brain tumor detection and classification. Training was performed in a **Kaggle notebook** with GPU support, and the complete workflow is documented in:
@@ -47,7 +45,7 @@ You can follow this notebook to visualize the data, perform training, evaluate p
 The dataset was sourced from **Roboflow Universe**:  
 🔗 [Roboflow Dataset - Brain Tumor](https://universe.roboflow.com/computer-vision-kbzhg/brain_tumor-gxibq/dataset/1)
 
-The following were already applied on the dataset, so you can skip doing that again.
+The following were already applied on the dataset, so you can skip doing these steps.
 **Preprocessing:**
 - Auto-Orient: ✅
 - Resize: Stretched to 640x640
@@ -71,7 +69,7 @@ To train your own model from scratch:
    dataset = version.download("yolov8")
    ```
 
-2. Run the notebook:
+2. Run the cells in the notebook:
    ```
    training/brain-tumor-classification-and-detection-yolov8.ipynb
    ```
@@ -81,7 +79,7 @@ To train your own model from scratch:
    runs/detect/train/weights/best.pt
    ```
 
-4. Copy the `best.pt` file to the `models/` directory:
+4. Download the `best.pt` file to the `models/` directory:
    ```
    models/best.pt
    ```
@@ -120,9 +118,7 @@ To run the app locally, follow these steps:
    ```
    pip install -r requirements.txt
    ```
-4. **Store your Model Weights**
-   - Replace best.pt with your model weights inside the models/ directory.
-5. **Run the App**
+4. **Run the App**
    ```
    python app.py
    ```
@@ -137,7 +133,6 @@ Use the interactive interface below to upload MRI scans and get instant predicti
 - Educational and demonstration purposes.
 - Showcase of YOLOv8 in medical imaging.
 - Assist developers and researchers exploring computer vision capabilities in healthcare and medical imaging research.
-
 
 ## 📌 Limitations
 - Not suitable for clinical use.
