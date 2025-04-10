@@ -23,6 +23,7 @@ short_description: This app detects and classifies brain tumors in MRI scans
   - Pituitary tumors
 - **Interactive UI**: Upload images, view detections, and see confidence levels.
 - **Lightweight & Fast**: Optimized using YOLOv8 for speed and accuracy.
+  
 
 ## 🧪 Model Training
 
@@ -124,15 +125,18 @@ To run the app locally, follow these steps:
    ```
 * You can now access the app at http://localhost:7860
 
+
 ## 🌐 Try it out
 Use the interactive interface below to upload MRI scans and get instant predictions with confidence scores.
 
 [🔗 Launch Cerebroscan in Browser](https://huggingface.co/spaces/natanyamodi/cerebroscan)
 
+
 ## 🔍 Intended Use
 - Educational and demonstration purposes.
 - Showcase of YOLOv8 in medical imaging.
 - Assist developers and researchers exploring computer vision capabilities in healthcare and medical imaging research.
+
 
 ## 📌 Limitations
 - Not suitable for clinical use.
@@ -141,6 +145,7 @@ Use the interactive interface below to upload MRI scans and get instant predicti
 - This tool is a research prototype and should never be used as a substitute for professional medical advice.
 
 **Always consult a licensed radiologist or medical professional for diagnostic decisions.**
+
 
 ## 📂 Project Structure
 ```
