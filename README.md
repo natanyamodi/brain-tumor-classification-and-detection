@@ -33,11 +33,11 @@ The dataset used in this project was sourced from **Roboflow Universe**:
 - Each image is annotated with bounding boxes to support object detection training.
 - The following have already been applied to the dataset:
   
-  **Preprocessing**
+  **Preprocessing:**
   - Auto-Orient: Applied
   - Resize: Stretch to 640x640
     
-  **Augmentations**
+  **Augmentations:**
   - Outputs per training example: 3
   - Flip: Horizontal, Vertical
 
@@ -67,9 +67,9 @@ The model was trained using Ultralytics YOLOv8 for brain tumor detection and cla
 You can follow the data visualization and training steps in the notebook provided in the training/ folder.
 
 **Training Environment**
-Platform: Kaggle Notebook
-Framework: Ultralytics YOLOv8
-Hardware: Free GPU T4 x 2 (via Kaggle GPU)
+- Platform: Kaggle Notebook
+- Framework: Ultralytics YOLOv8
+- Hardware: Free GPU T4 x 2 (via Kaggle GPU)
 
 ### 📊 YOLOv8 Evaluation Results
 
