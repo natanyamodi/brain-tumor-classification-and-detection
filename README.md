@@ -131,6 +131,11 @@ Use the interactive interface below to upload MRI scans and get instant predicti
 
 [🔗 Launch Cerebroscan in Browser](https://huggingface.co/spaces/natanyamodi/cerebroscan)
 
+### How to Use
+- Click on the "Launch Cerebroscan in Browser" button above.
+- Upload a MRI scan by clicking on the "Upload Image" button or choose an image from the example images.
+- Once the image is uploaded, the model will process it and provide the detections with bounding boxes, predicted labels, and confidence scores.
+
 
 ## 🔍 Intended Use
 - Educational and demonstration purposes.
