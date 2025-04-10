@@ -32,12 +32,14 @@ The dataset used in this project was sourced from **Roboflow Universe**:
 - The dataset includes labeled MRI scans for 3 tumor types: **Glioma**, **Meningioma**, and **Pituitary**.
 - Each image is annotated with bounding boxes to support object detection training.
 - The following have already been applied to the dataset:
+  
   **Preprocessing**
-  Auto-Orient: Applied
-  Resize: Stretch to 640x640
+  - Auto-Orient: Applied
+  - Resize: Stretch to 640x640
+    
   **Augmentations**
-  Outputs per training example: 3
-  Flip: Horizontal, Vertical
+  - Outputs per training example: 3
+  - Flip: Horizontal, Vertical
 
 ### 💾 How to Download the Dataset from Roboflow
 
