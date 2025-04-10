@@ -101,7 +101,7 @@ To run the app locally, follow these steps:
    pip install -r requirements.txt
    ```
 4. **Store your Model Weights**
-   Replace best.pt with your model weights inside the models/ directory.
+Replace best.pt with your model weights inside the models/ directory.
 5. **Run the App**
    ```
    python app.py
@@ -110,6 +110,7 @@ To run the app locally, follow these steps:
 
 ## 🌐 Try it out
 Use the interactive interface below to upload MRI scans and get instant predictions with confidence scores.
+
 [🔗 Launch Cerebroscan in Browser](https://huggingface.co/spaces/natanyamodi/cerebroscan)
 
 ## 🔍 Intended Use
