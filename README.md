@@ -24,52 +24,74 @@ short_description: This app detects and classifies brain tumors in MRI scans
 - **Interactive UI**: Upload images, view detections, and see confidence levels.
 - **Lightweight & Fast**: Optimized using YOLOv8 for speed and accuracy.
 
-## 🧠 Dataset 
-The dataset used in this project was sourced from **Roboflow Universe**:
-
-🔗 [Roboflow Dataset - Brain Tumor](https://universe.roboflow.com/computer-vision-kbzhg/brain_tumor-gxibq/dataset/1)
-
-- The dataset includes labeled MRI scans for 3 tumor types: **Glioma**, **Meningioma**, and **Pituitary**.
-- Each image is annotated with bounding boxes to support object detection training.
-- The following have already been applied to the dataset:
-  
-  **Preprocessing:**
-  - Auto-Orient: Applied
-  - Resize: Stretch to 640x640
-    
-  **Augmentations:**
-  - Outputs per training example: 3
-  - Flip: Horizontal, Vertical
-
-### 💾 How to Download the Dataset from Roboflow
-
-1. Go to the dataset page:  
-[Roboflow Dataset - Brain Tumor](https://universe.roboflow.com/computer-vision-kbzhg/brain_tumor-gxibq/dataset/1)
-
-2. Click **Download Dataset** → Choose **YOLOv8** as the export format.
-
-3. Select **Show Download Code**, then copy the snippet and paste it into your training notebook:
-```
-!pip install roboflow
-
-from roboflow import Roboflow
-rf = Roboflow(api_key="your_api_key")
-project = rf.workspace("computer-vision-kbzhg").project("brain_tumor-gxibq")
-version = project.version(1)
-dataset = version.download("yolov8")             
-```
-**💡 Recommended to use Kaggle Notebooks or Google Colab to train the model since they offer free GPU acceleration.**
+---
 
 ## 🧪 Model Training
 
-The model was trained using Ultralytics YOLOv8 for brain tumor detection and classification. Training was performed in a Kaggle notebook with GPU support.
+The model was trained using **Ultralytics YOLOv8** for brain tumor detection and classification. Training was performed in a **Kaggle notebook** with GPU support, and the complete workflow is documented in:
 
-You can follow the data visualization and training steps in the notebook provided in the training/ folder.
+```
+training/brain-tumor-classification-and-detection-yolov8.ipynb
+```
 
-**Training Environment**
-- Platform: Kaggle Notebook
-- Framework: Ultralytics YOLOv8
-- Hardware: Free GPU T4 x 2 (via Kaggle GPU)
+You can follow this notebook to visualize the data, perform training, evaluate performance, and export the trained model weights.
+
+### 💻 Training Environment
+
+- **Platform**: Kaggle Notebook
+- **Framework**: Ultralytics YOLOv8
+- **Hardware**: Free GPU T4 x2 (via Kaggle)
+
+### 🧠 Dataset Overview
+
+The dataset was sourced from **Roboflow Universe**:  
+🔗 [Roboflow Dataset - Brain Tumor](https://universe.roboflow.com/computer-vision-kbzhg/brain_tumor-gxibq/dataset/1)
+
+The following were already applied on the dataset, so you can skip doing that again.
+**Preprocessing:**
+- Auto-Orient: ✅
+- Resize: Stretched to 640x640
+
+**Augmentations:**
+- Outputs per training example: 3
+- Flip: Horizontal & Vertical ✅
+
+
+### 🛠️ Train Your Own Model
+
+To train your own model from scratch:
+
+1. Download the dataset using the Roboflow code snippet:
+   ```python
+   !pip install roboflow
+   from roboflow import Roboflow
+   rf = Roboflow(api_key="your_api_key")
+   project = rf.workspace("computer-vision-kbzhg").project("brain_tumor-gxibq")
+   version = project.version(1)
+   dataset = version.download("yolov8")
+   ```
+
+2. Run the notebook:
+   ```
+   training/brain-tumor-classification-and-detection-yolov8.ipynb
+   ```
+
+3. After training, you’ll find your model weights at:
+   ```
+   runs/detect/train/weights/best.pt
+   ```
+
+4. Copy the `best.pt` file to the `models/` directory:
+   ```
+   models/best.pt
+   ```
+
+### ✅ Skip Training? Use Pretrained Weights
+
+If you’d like to skip training and directly use a pretrained model:
+- The `models/best.pt` file is already included in this repository.
+- These weights were trained using the steps described above on the Roboflow dataset.
+
 
 ### 📊 YOLOv8 Evaluation Results
 
@@ -80,8 +102,6 @@ You can follow the data visualization and training steps in the notebook provide
 | Meningioma Tumor  | 522    | 524       | 0.987     | 0.993  | 0.993  | 0.952        |
 | Pituitary Tumor   | 456    | 456       | 0.979     | 0.980  | 0.993  | 0.912        |
 
-**Download the best model weights**
-- You can go to runs/detect/train/weights/best.pt and download these weights.
 
 ## 🚀 Local Setup & Installation
 
@@ -101,7 +121,7 @@ To run the app locally, follow these steps:
    pip install -r requirements.txt
    ```
 4. **Store your Model Weights**
-Replace best.pt with your model weights inside the models/ directory.
+   - Replace best.pt with your model weights inside the models/ directory.
 5. **Run the App**
    ```
    python app.py
