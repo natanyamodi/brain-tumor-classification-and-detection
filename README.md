@@ -47,12 +47,12 @@ The dataset was sourced from **Roboflow Universe**:
 
 The following were already applied on the dataset, so you can skip doing these steps.
 **Preprocessing:**
-- Auto-Orient: ✅
+- Auto-Orient Applied
 - Resize: Stretched to 640x640
 
 **Augmentations:**
 - Outputs per training example: 3
-- Flip: Horizontal & Vertical ✅
+- Flip: Horizontal & Vertical
 
 
 ### 🛠️ Train Your Own Model
